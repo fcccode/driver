@@ -1,0 +1,80 @@
+ main
+
+ Timestamp is 5861d0f2 (Tue Dec 27 10:24:50 2016)
+
+ Preferred load address is 00010000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000706H .text                   CODE
+ 0002:00000000 00000050H .idata$5                DATA
+ 0002:00000080 00000199H .rdata                  DATA
+ 0003:00000000 00000028H .idata$2                CODE
+ 0003:00000028 00000014H .idata$3                CODE
+ 0003:0000003c 00000050H .idata$4                CODE
+ 0003:0000008c 0000018eH .idata$6                CODE
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0001:00000000       _CsqInsertIrp@8            000102c0 f   main.obj
+ 0001:00000043       _CsqRemoveIrp@8            00010303 f   main.obj
+ 0001:00000067       _CsqCompleteCanceledIrp@8  00010327 f   main.obj
+ 0001:0000009f       _CsqPeekNextIrp@12         0001035f f   main.obj
+ 0001:0000013b       _CsqAcquireLock@8          000103fb f   main.obj
+ 0001:0000016d       _CsqReleaseLock@8          0001042d f   main.obj
+ 0001:000001c2       _OnTimer@16                00010482 f   main.obj
+ 0001:00000278       _IrpOpenClose@8            00010538 f   main.obj
+ 0001:000002cc       _IrpIOCTL@8                0001058c f   main.obj
+ 0001:0000037c       _IrpPnP@8                  0001063c f   main.obj
+ 0001:000003fa       _AddDevice@8               000106ba f   main.obj
+ 0001:000004f5       _Unload@4                  000107b5 f   main.obj
+ 0001:000004fe       _DriverEntry@8             000107be f   main.obj
+ 0001:0000053e       @KfAcquireSpinLock@4       000107fe f   hal:HAL.dll
+ 0001:00000544       @KfReleaseSpinLock@8       00010804 f   hal:HAL.dll
+ 0001:0000054a       _IoAttachDeviceToDeviceStack@8 0001080a f   ntoskrnl:ntoskrnl.exe
+ 0001:00000550       _IoCallDriver@8            00010810 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000556       _IoCreateDevice@28         00010816 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000055c       _IoCreateSymbolicLink@8    0001081c f   ntoskrnl:ntoskrnl.exe
+ 0001:00000562       _IoDeleteDevice@4          00010822 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000568       _IoDeleteSymbolicLink@4    00010828 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000056e       _IoDetachDevice@4          0001082e f   ntoskrnl:ntoskrnl.exe
+ 0001:00000574       _KeCancelTimer@4           00010834 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000057a       _KeInitializeDpc@12        0001083a f   ntoskrnl:ntoskrnl.exe
+ 0001:00000580       _KeInitializeTimer@4       00010840 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000586       _KeSetTimerEx@20           00010846 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000058c       _RtlInitUnicodeString@8    0001084c f   ntoskrnl:ntoskrnl.exe
+ 0001:00000592       _DbgPrint                  00010852 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000598       @IofCompleteRequest@8      00010858 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000059e       @KefReleaseSpinLockFromDpcLevel@4 0001085e f   ntoskrnl:ntoskrnl.exe
+ 0001:000005a4       _IopCsqCancelRoutine@8     00010864 f   csq:cancelapi.obj
+ 0001:00000604       _WdmlibIoCsqInitialize@28  000108c4 f   csq:cancelapi.obj
+ 0001:00000640       _WdmlibIoCsqInsertIrpEx@16 00010900 f   csq:cancelapi.obj
+ 0001:000006e6       _WdmlibIoCsqInsertIrp@12   000109a6 f   csq:cancelapi.obj
+ 0001:00000700       _IoReleaseCancelSpinLock@4 000109c0 f   ntoskrnl:ntoskrnl.exe
+ 0002:00000000       __imp_@KfReleaseSpinLock@8 00010a00     hal:HAL.dll
+ 0002:00000004       __imp_@KfAcquireSpinLock@4 00010a04     hal:HAL.dll
+ 0002:00000008       \177HAL_NULL_THUNK_DATA    00010a08     hal:HAL.dll
+ 0002:0000000c       __imp__IoAttachDeviceToDeviceStack@8 00010a0c     ntoskrnl:ntoskrnl.exe
+ 0002:00000010       __imp__IoCallDriver@8      00010a10     ntoskrnl:ntoskrnl.exe
+ 0002:00000014       __imp__IoCreateDevice@28   00010a14     ntoskrnl:ntoskrnl.exe
+ 0002:00000018       __imp__IoCreateSymbolicLink@8 00010a18     ntoskrnl:ntoskrnl.exe
+ 0002:0000001c       __imp__IoDeleteDevice@4    00010a1c     ntoskrnl:ntoskrnl.exe
+ 0002:00000020       __imp__IoDeleteSymbolicLink@4 00010a20     ntoskrnl:ntoskrnl.exe
+ 0002:00000024       __imp__IoDetachDevice@4    00010a24     ntoskrnl:ntoskrnl.exe
+ 0002:00000028       __imp__KeCancelTimer@4     00010a28     ntoskrnl:ntoskrnl.exe
+ 0002:0000002c       __imp__KeInitializeDpc@12  00010a2c     ntoskrnl:ntoskrnl.exe
+ 0002:00000030       __imp__KeInitializeTimer@4 00010a30     ntoskrnl:ntoskrnl.exe
+ 0002:00000034       __imp__KeSetTimerEx@20     00010a34     ntoskrnl:ntoskrnl.exe
+ 0002:00000038       __imp__RtlInitUnicodeString@8 00010a38     ntoskrnl:ntoskrnl.exe
+ 0002:0000003c       __imp__DbgPrint            00010a3c     ntoskrnl:ntoskrnl.exe
+ 0002:00000040       __imp_@IofCompleteRequest@8 00010a40     ntoskrnl:ntoskrnl.exe
+ 0002:00000044       __imp_@KefReleaseSpinLockFromDpcLevel@4 00010a44     ntoskrnl:ntoskrnl.exe
+ 0002:00000048       __imp__IoReleaseCancelSpinLock@4 00010a48     ntoskrnl:ntoskrnl.exe
+ 0002:0000004c       \177ntoskrnl_NULL_THUNK_DATA 00010a4c     ntoskrnl:ntoskrnl.exe
+ 0003:00000000       __IMPORT_DESCRIPTOR_HAL    00010c40     hal:HAL.dll
+ 0003:00000014       __IMPORT_DESCRIPTOR_ntoskrnl 00010c54     ntoskrnl:ntoskrnl.exe
+ 0003:00000028       __NULL_IMPORT_DESCRIPTOR   00010c68     hal:HAL.dll
+
+ entry point at        0001:000004fe
+
+ Static symbols
+

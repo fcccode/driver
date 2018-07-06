@@ -1,0 +1,23 @@
+﻿  Building 'firstKMDF' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Debug\firstKMDF.inf [Version] section with DriverVer=12/15/2016,18.38.12.326
+  main.c
+  firstKMDF.vcxproj -> C:\Users\test\Desktop\firstKMDF\x64\Debug\firstKMDF.sys
+  firstKMDF.vcxproj -> C:\Users\test\Desktop\firstKMDF\x64\Debug\firstKMDF.pdb (Full PDB)
+  Done Adding Additional Store
+  Successfully signed: C:\Users\test\Desktop\firstKMDF\x64\Debug\firstKMDF.sys
+  
+  Driver is a Universal Driver.
+  ........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\test\Desktop\firstKMDF\x64\Debug\firstKMDF\firstkmdf.cat
+  Done Adding Additional Store
+  Successfully signed: C:\Users\test\Desktop\firstKMDF\x64\Debug\firstKMDF\firstkmdf.cat
+  

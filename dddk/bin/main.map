@@ -1,0 +1,89 @@
+ main
+
+ Timestamp is 586386f2 (Wed Dec 28 17:33:38 2016)
+
+ Preferred load address is 00010000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000039aH .text                   CODE
+ 0002:00000000 00000048H .idata$5                DATA
+ 0003:00000000 00000000H .data                   DATA
+ 0003:00000000 00000008H .bss                    DATA
+ 0004:00000000 0000000cH _INIT_                  DATA
+ 0005:00000000 0000000cH _EXIT_                  DATA
+ 0006:00000000 00000014H .idata$2                CODE
+ 0006:00000014 00000014H .idata$3                CODE
+ 0006:00000028 00000048H .idata$4                CODE
+ 0006:00000070 00000170H .idata$6                CODE
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0001:00000000       IoCompleteRequest          000102e0     DDDK.obj
+ 0001:00000014       IoCreateDevice             000102f4     DDDK.obj
+ 0001:0000003c       IoDeleteDevice             0001031c     DDDK.obj
+ 0001:0000004c       IoCreateSymbolicLink       0001032c     DDDK.obj
+ 0001:00000060       IoDeleteSymbolicLink       00010340     DDDK.obj
+ 0001:00000070       RtlInitUnicodeString       00010350     DDDK.obj
+ 0001:00000084       InterlockedExchange        00010364     DDDK.obj
+ 0001:00000096       ZwOpenProcess              00010376     DDDK.obj
+ 0001:000000b2       ProbeForRead               00010392     DDDK.obj
+ 0001:000000ca       ExFreePool                 000103aa     DDDK.obj
+ 0001:000000da       KeWaitForSingleObject      000103ba     DDDK.obj
+ 0001:000000fa       KeWaitForMutexObject       000103da     DDDK.obj
+ 0001:0000011a       ExAllocatePool             000103fa     DDDK.obj
+ 0001:0000012e       ExAllocatePoolWithQuota    0001040e     DDDK.obj
+ 0001:00000142       ExAllocatePoolWithTag      00010422     DDDK.obj
+ 0001:0000015a       KeInitializeMutex          0001043a     DDDK.obj
+ 0001:0000016e       KeReleaseMutex             0001044e     DDDK.obj
+ 0001:00000182       ZwOpenProcessAddr          00010462     DDDK.obj
+ 0001:0000018f       KeServiceDescriptorTable   0001046f     DDDK.obj
+ 0001:00000197       IoGetCurrentIrpStackLocation 00010477     DDDK.obj
+ 0001:000001a4       NT_SUCCESS                 00010484     DDDK.obj
+ 0001:000001aa       DbgPrint                   0001048a     DDDK.obj
+ 0001:000001b3       DbgMsg                     00010493     DDDK.obj
+ 0001:000001bc       Finalization               0001049c     DDDK.obj
+ 0001:000001ea       initialization             000104ca     DDDK.obj
+ 0001:000001f4       driver                     000104d4     driver.obj
+ 0001:00000260       _DriverEntry               00010540     driver.obj
+ 0001:0000033a       @InterlockedExchange@8     0001061a f   ntoskrnl:ntoskrnl.exe
+ 0001:00000340       _IoDeleteSymbolicLink@4    00010620 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000346       _IoCompleteRequest@8       00010626 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000034c       _ExAllocatePoolWithQuota@8 0001062c f   ntoskrnl:ntoskrnl.exe
+ 0001:00000352       _ExAllocatePool@8          00010632 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000358       _IoCreateDevice@28         00010638 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000035e       _ExAllocatePoolWithTag@12  0001063e f   ntoskrnl:ntoskrnl.exe
+ 0001:00000364       _KeWaitForSingleObject@20  00010644 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000036a       _IoCreateSymbolicLink@8    0001064a f   ntoskrnl:ntoskrnl.exe
+ 0001:00000370       _ZwOpenProcess@16          00010650 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000376       _ExFreePool@4              00010656 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000037c       _IoDeleteDevice@4          0001065c f   ntoskrnl:ntoskrnl.exe
+ 0001:00000382       _ProbeForRead@12           00010662 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000388       _RtlInitUnicodeString@8    00010668 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000038e       _KeInitializeMutex@8       0001066e f   ntoskrnl:ntoskrnl.exe
+ 0001:00000394       _KeReleaseMutex@8          00010674 f   ntoskrnl:ntoskrnl.exe
+ 0002:00000000       __imp_@InterlockedExchange@8 00010680     ntoskrnl:ntoskrnl.exe
+ 0002:00000004       __imp__IoDeleteSymbolicLink@4 00010684     ntoskrnl:ntoskrnl.exe
+ 0002:00000008       __imp__IoCompleteRequest@8 00010688     ntoskrnl:ntoskrnl.exe
+ 0002:0000000c       __imp__ExAllocatePoolWithQuota@8 0001068c     ntoskrnl:ntoskrnl.exe
+ 0002:00000010       __imp__ExAllocatePool@8    00010690     ntoskrnl:ntoskrnl.exe
+ 0002:00000014       __imp__IoCreateDevice@28   00010694     ntoskrnl:ntoskrnl.exe
+ 0002:00000018       __imp__ExAllocatePoolWithTag@12 00010698     ntoskrnl:ntoskrnl.exe
+ 0002:0000001c       __imp__KeWaitForSingleObject@20 0001069c     ntoskrnl:ntoskrnl.exe
+ 0002:00000020       __imp__IoCreateSymbolicLink@8 000106a0     ntoskrnl:ntoskrnl.exe
+ 0002:00000024       __imp__ZwOpenProcess@16    000106a4     ntoskrnl:ntoskrnl.exe
+ 0002:00000028       __imp__ExFreePool@4        000106a8     ntoskrnl:ntoskrnl.exe
+ 0002:0000002c       __imp__IoDeleteDevice@4    000106ac     ntoskrnl:ntoskrnl.exe
+ 0002:00000030       __imp__ProbeForRead@12     000106b0     ntoskrnl:ntoskrnl.exe
+ 0002:00000034       __imp__RtlInitUnicodeString@8 000106b4     ntoskrnl:ntoskrnl.exe
+ 0002:00000038       __imp__KeInitializeMutex@8 000106b8     ntoskrnl:ntoskrnl.exe
+ 0002:0000003c       __imp__KeServiceDescriptorTable 000106bc     ntoskrnl:ntoskrnl.exe
+ 0002:0000003c       _KeServiceDescriptorTable  000106bc     ntoskrnl:ntoskrnl.exe
+ 0002:00000040       __imp__KeReleaseMutex@8    000106c0     ntoskrnl:ntoskrnl.exe
+ 0002:00000044       \177ntoskrnl_NULL_THUNK_DATA 000106c4     ntoskrnl:ntoskrnl.exe
+ 0006:00000000       __IMPORT_DESCRIPTOR_ntoskrnl 00010740     ntoskrnl:ntoskrnl.exe
+ 0006:00000014       __NULL_IMPORT_DESCRIPTOR   00010754     ntoskrnl:ntoskrnl.exe
+
+ entry point at        0001:00000260
+
+ Static symbols
+

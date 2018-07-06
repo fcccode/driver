@@ -1,0 +1,6 @@
+1>warnings in directory c:\thread\sys
+1>c:\thread\sys\main.c(96) : warning C4047: 'function' : 'PHANDLE' differs in levels of indirection from 'ULONG *'
+1>c:\thread\sys\main.c(96) : warning C4022: 'PsCreateSystemThread' : pointer mismatch for actual parameter 1
+1>c:\thread\sys\main.c(96) : warning C4022: 'PsCreateSystemThread' : pointer mismatch for actual parameter 4
+1>c:\thread\sys\main.c(98) : warning C4022: 'ObReferenceObjectByHandle' : pointer mismatch for actual parameter 1
+1>c:\thread\sys\main.c(99) : warning C4022: 'ZwClose' : pointer mismatch for actual parameter 1

@@ -1,0 +1,74 @@
+               KmdKit v2.0
+       Copyright(C) 2002-2005 Four-F
+       Copyright(c) 2009-2016 Steward
+
+      What's new in the latest version
+      --------------------------------
+
+[!] Important
+[+] New
+[-] Removed
+[x] Fixed
+[*] Change/Update
+
+================== added by Four-F ==================
+[*] \include\w2k\ntdef.inc
+[*] \include\w2k\ntddk.inc
+[*] \include\w2k\ntddmou.inc
+[*] \include\w2k\ntddcdrm.inc
+[*] \include\w2k\ntddstor.inc
+[*] \include\w2k\ipfirewall.inc
+[+] \include\w2k\guiddef.inc
+[+] \include\w2k\devguid.inc
+[*] \include\w2k\hal.inc
+[*] \include\w2k\ntdll.inc
+[*] \include\w2k\ntoskrnl.inc
+[*] \include\w2k\win32k.inc
+[*] \macros\Strings.mac
+
+[*] \tools\GdtDump v1.1
+[*] \tools\IdtDump v1.1
+[*] \tools\KmdManager v1.3
+[*] \tools\PhysMemBrowser v1.2
+[+] \tools\protogen v1.0
+[*] \tools\StatusToError v1.3
+[*] \tools\SymLinks v1.2
+[-] \tools\IoctlDecoder (standalone project)
+[-] \tools\ObjectExplorer (standalone project)
+
+[+] \examples\advanced\SecureDevices
+[+] \examples\advanced\KbdSpy
+[+] \examples\advanced\MouSpy
+[+] \examples\basic\IsSafeBootMode
+[+] \examples\basic\Sections
+[+] \examples\nodriver\DriveLayout
+[+] \examples\setup\EnumDisk
+
+[x] many small fixes (can't remember)
+
+================== updated/added by Steward ==================
+[+] \lib\wxp\i386\csq.lib
+[+] \lib\win7\i386\csq.lib
+[+] \lib\win7\amd64\csq.lib
+[+] \lib\wdf\kmdf\i386\1.9\wdfldr.lib
+[+] \lib\wdf\kmdf\i386\1.9\wdfdriverentry.lib
+
+[*] \include\w2k\ntdef.inc
+[*] \include\w2k\ntddk.inc
+[+] \include\wxp\csq.inc
+[+] \include\wxp\usb100.inc
+[+] \include\wxp\usb.inc
+[+] \include\wxp\usbdlib.inc
+[+] \include\wxp\usbioctl.inc
+[+] \include\wxp\wdm.inc
+[+] \include\wdf\kmdf\1.9\wdf.inc
+[+] \include\wdf\kmdf\1.9\wdfdevice.inc
+[+] \include\wdf\kmdf\1.9\wdfdriver.inc
+[+] \include\wdf\kmdf\1.9\wdffuncenum.inc
+[+] \include\wdf\kmdf\1.9\wdfglobals.inc
+[+] \include\wdf\kmdf\1.9\wdfio.inc
+[+] \include\wdf\kmdf\1.9\wdfmemory.inc
+[+] \include\wdf\kmdf\1.9\wdfobject.inc
+[+] \include\wdf\kmdf\1.9\wdfrequest.inc
+[+] \include\wdf\kmdf\1.9\wdftypes.inc
+[+] \include\wdf\umdf\1.9\wudfddi_types.inc

@@ -1,0 +1,1 @@
+cmd_/home/steward/Downloads/gh_linux_driver/asm/arm/char/ioctl/ldd.ko := ld -EL -r  -T /home/steward/Downloads/pandora-kernel/scripts/module-common.lds --build-id  -o /home/steward/Downloads/gh_linux_driver/asm/arm/char/ioctl/ldd.ko /home/steward/Downloads/gh_linux_driver/asm/arm/char/ioctl/ldd.o /home/steward/Downloads/gh_linux_driver/asm/arm/char/ioctl/ldd.mod.o

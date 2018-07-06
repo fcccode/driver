@@ -1,0 +1,92 @@
+ hello
+
+ Timestamp is 586397ca (Wed Dec 28 18:45:30 2016)
+
+ Preferred load address is 00010000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000484H .text                   CODE
+ 0002:00000000 0000004cH .idata$5                DATA
+ 0002:0000004c 00000058H .rdata                  DATA
+ 0003:00000000 00000000H .data                   DATA
+ 0003:00000000 00000008H .bss                    DATA
+ 0004:00000000 0000000cH _INIT_                  DATA
+ 0005:00000000 0000000cH _EXIT_                  DATA
+ 0006:00000000 00000014H .idata$2                CODE
+ 0006:00000014 00000014H .idata$3                CODE
+ 0006:00000028 0000004cH .idata$4                CODE
+ 0006:00000074 0000017cH .idata$6                CODE
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0001:00000000       IoCompleteRequest          000102e0     DDDK.obj
+ 0001:00000014       IoCreateDevice             000102f4     DDDK.obj
+ 0001:0000003c       IoDeleteDevice             0001031c     DDDK.obj
+ 0001:0000004c       IoCreateSymbolicLink       0001032c     DDDK.obj
+ 0001:00000060       IoDeleteSymbolicLink       00010340     DDDK.obj
+ 0001:00000070       RtlInitUnicodeString       00010350     DDDK.obj
+ 0001:00000084       InterlockedExchange        00010364     DDDK.obj
+ 0001:00000096       ZwOpenProcess              00010376     DDDK.obj
+ 0001:000000b2       ProbeForRead               00010392     DDDK.obj
+ 0001:000000ca       ExFreePool                 000103aa     DDDK.obj
+ 0001:000000da       KeWaitForSingleObject      000103ba     DDDK.obj
+ 0001:000000fa       KeWaitForMutexObject       000103da     DDDK.obj
+ 0001:0000011a       ExAllocatePool             000103fa     DDDK.obj
+ 0001:0000012e       ExAllocatePoolWithQuota    0001040e     DDDK.obj
+ 0001:00000142       ExAllocatePoolWithTag      00010422     DDDK.obj
+ 0001:0000015a       KeInitializeMutex          0001043a     DDDK.obj
+ 0001:0000016e       KeReleaseMutex             0001044e     DDDK.obj
+ 0001:00000182       ZwOpenProcessAddr          00010462     DDDK.obj
+ 0001:0000018f       KeServiceDescriptorTable   0001046f     DDDK.obj
+ 0001:00000197       IoGetCurrentIrpStackLocation 00010477     DDDK.obj
+ 0001:000001a4       NT_SUCCESS                 00010484     DDDK.obj
+ 0001:000001aa       DbgPrint                   0001048a     DDDK.obj
+ 0001:00000323       DbgMsg                     00010603     DDDK.obj
+ 0001:00000354       Finalization               00010634     DDDK.obj
+ 0001:00000382       initialization             00010662     DDDK.obj
+ 0001:0000038c       hello                      0001066c     hello.obj
+ 0001:00000393       _DriverEntry               00010673     hello.obj
+ 0001:0000041e       @InterlockedExchange@8     000106fe f   ntoskrnl:ntoskrnl.exe
+ 0001:00000424       _IoDeleteSymbolicLink@4    00010704 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000042a       _IoCompleteRequest@8       0001070a f   ntoskrnl:ntoskrnl.exe
+ 0001:00000430       _ExAllocatePoolWithQuota@8 00010710 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000436       _ExAllocatePool@8          00010716 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000043c       _IoCreateDevice@28         0001071c f   ntoskrnl:ntoskrnl.exe
+ 0001:00000442       _ExAllocatePoolWithTag@12  00010722 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000448       _KeWaitForSingleObject@20  00010728 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000044e       _IoCreateSymbolicLink@8    0001072e f   ntoskrnl:ntoskrnl.exe
+ 0001:00000454       _ZwOpenProcess@16          00010734 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000045a       _ExFreePool@4              0001073a f   ntoskrnl:ntoskrnl.exe
+ 0001:00000460       _IoDeleteDevice@4          00010740 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000466       _ProbeForRead@12           00010746 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000046c       _RtlInitUnicodeString@8    0001074c f   ntoskrnl:ntoskrnl.exe
+ 0001:00000472       _KeInitializeMutex@8       00010752 f   ntoskrnl:ntoskrnl.exe
+ 0001:00000478       _KeReleaseMutex@8          00010758 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000047e       _DbgPrint                  0001075e f   ntoskrnl:ntoskrnl.exe
+ 0002:00000000       __imp_@InterlockedExchange@8 00010780     ntoskrnl:ntoskrnl.exe
+ 0002:00000004       __imp__IoDeleteSymbolicLink@4 00010784     ntoskrnl:ntoskrnl.exe
+ 0002:00000008       __imp__IoCompleteRequest@8 00010788     ntoskrnl:ntoskrnl.exe
+ 0002:0000000c       __imp__ExAllocatePoolWithQuota@8 0001078c     ntoskrnl:ntoskrnl.exe
+ 0002:00000010       __imp__ExAllocatePool@8    00010790     ntoskrnl:ntoskrnl.exe
+ 0002:00000014       __imp__IoCreateDevice@28   00010794     ntoskrnl:ntoskrnl.exe
+ 0002:00000018       __imp__ExAllocatePoolWithTag@12 00010798     ntoskrnl:ntoskrnl.exe
+ 0002:0000001c       __imp__KeWaitForSingleObject@20 0001079c     ntoskrnl:ntoskrnl.exe
+ 0002:00000020       __imp__IoCreateSymbolicLink@8 000107a0     ntoskrnl:ntoskrnl.exe
+ 0002:00000024       __imp__ZwOpenProcess@16    000107a4     ntoskrnl:ntoskrnl.exe
+ 0002:00000028       __imp__ExFreePool@4        000107a8     ntoskrnl:ntoskrnl.exe
+ 0002:0000002c       __imp__IoDeleteDevice@4    000107ac     ntoskrnl:ntoskrnl.exe
+ 0002:00000030       __imp__ProbeForRead@12     000107b0     ntoskrnl:ntoskrnl.exe
+ 0002:00000034       __imp__RtlInitUnicodeString@8 000107b4     ntoskrnl:ntoskrnl.exe
+ 0002:00000038       __imp__KeInitializeMutex@8 000107b8     ntoskrnl:ntoskrnl.exe
+ 0002:0000003c       _KeServiceDescriptorTable  000107bc     ntoskrnl:ntoskrnl.exe
+ 0002:0000003c       __imp__KeServiceDescriptorTable 000107bc     ntoskrnl:ntoskrnl.exe
+ 0002:00000040       __imp__KeReleaseMutex@8    000107c0     ntoskrnl:ntoskrnl.exe
+ 0002:00000044       __imp__DbgPrint            000107c4     ntoskrnl:ntoskrnl.exe
+ 0002:00000048       \177ntoskrnl_NULL_THUNK_DATA 000107c8     ntoskrnl:ntoskrnl.exe
+ 0006:00000000       __IMPORT_DESCRIPTOR_ntoskrnl 000108a0     ntoskrnl:ntoskrnl.exe
+ 0006:00000014       __NULL_IMPORT_DESCRIPTOR   000108b4     ntoskrnl:ntoskrnl.exe
+
+ entry point at        0001:00000393
+
+ Static symbols
+

@@ -1,0 +1,60 @@
+ main
+
+ Timestamp is 5860c418 (Mon Dec 26 15:17:44 2016)
+
+ Preferred load address is 00010000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000002eaH .text                   CODE
+ 0002:00000000 0000003cH .idata$5                DATA
+ 0002:0000003c 00000134H .rdata                  DATA
+ 0003:00000000 00000014H .idata$2                CODE
+ 0003:00000014 00000014H .idata$3                CODE
+ 0003:00000028 0000003cH .idata$4                CODE
+ 0003:00000064 00000122H .idata$6                CODE
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0001:00000000       _OnTimer@16                00010260 f   main.obj
+ 0001:00000020       _IrpOpenClose@8            00010280 f   main.obj
+ 0001:00000074       _IrpIOCTL@8                000102d4 f   main.obj
+ 0001:0000011b       _IrpPnP@8                  0001037b f   main.obj
+ 0001:00000199       _AddDevice@8               000103f9 f   main.obj
+ 0001:0000024d       _Unload@4                  000104ad f   main.obj
+ 0001:00000256       _DriverEntry@8             000104b6 f   main.obj
+ 0001:00000296       _IoAttachDeviceToDeviceStack@8 000104f6 f   ntoskrnl:ntoskrnl.exe
+ 0001:0000029c       _IoCallDriver@8            000104fc f   ntoskrnl:ntoskrnl.exe
+ 0001:000002a2       _IoCreateDevice@28         00010502 f   ntoskrnl:ntoskrnl.exe
+ 0001:000002a8       _IoCreateSymbolicLink@8    00010508 f   ntoskrnl:ntoskrnl.exe
+ 0001:000002ae       _IoDeleteDevice@4          0001050e f   ntoskrnl:ntoskrnl.exe
+ 0001:000002b4       _IoDeleteSymbolicLink@4    00010514 f   ntoskrnl:ntoskrnl.exe
+ 0001:000002ba       _IoDetachDevice@4          0001051a f   ntoskrnl:ntoskrnl.exe
+ 0001:000002c0       _KeCancelTimer@4           00010520 f   ntoskrnl:ntoskrnl.exe
+ 0001:000002c6       _KeInitializeDpc@12        00010526 f   ntoskrnl:ntoskrnl.exe
+ 0001:000002cc       _KeInitializeTimer@4       0001052c f   ntoskrnl:ntoskrnl.exe
+ 0001:000002d2       _KeSetTimerEx@20           00010532 f   ntoskrnl:ntoskrnl.exe
+ 0001:000002d8       _RtlInitUnicodeString@8    00010538 f   ntoskrnl:ntoskrnl.exe
+ 0001:000002de       _DbgPrint                  0001053e f   ntoskrnl:ntoskrnl.exe
+ 0001:000002e4       @IofCompleteRequest@8      00010544 f   ntoskrnl:ntoskrnl.exe
+ 0002:00000000       __imp__IoAttachDeviceToDeviceStack@8 00010560     ntoskrnl:ntoskrnl.exe
+ 0002:00000004       __imp__IoCallDriver@8      00010564     ntoskrnl:ntoskrnl.exe
+ 0002:00000008       __imp__IoCreateDevice@28   00010568     ntoskrnl:ntoskrnl.exe
+ 0002:0000000c       __imp__IoCreateSymbolicLink@8 0001056c     ntoskrnl:ntoskrnl.exe
+ 0002:00000010       __imp__IoDeleteDevice@4    00010570     ntoskrnl:ntoskrnl.exe
+ 0002:00000014       __imp__IoDeleteSymbolicLink@4 00010574     ntoskrnl:ntoskrnl.exe
+ 0002:00000018       __imp__IoDetachDevice@4    00010578     ntoskrnl:ntoskrnl.exe
+ 0002:0000001c       __imp__KeCancelTimer@4     0001057c     ntoskrnl:ntoskrnl.exe
+ 0002:00000020       __imp__KeInitializeDpc@12  00010580     ntoskrnl:ntoskrnl.exe
+ 0002:00000024       __imp__KeInitializeTimer@4 00010584     ntoskrnl:ntoskrnl.exe
+ 0002:00000028       __imp__KeSetTimerEx@20     00010588     ntoskrnl:ntoskrnl.exe
+ 0002:0000002c       __imp__RtlInitUnicodeString@8 0001058c     ntoskrnl:ntoskrnl.exe
+ 0002:00000030       __imp__DbgPrint            00010590     ntoskrnl:ntoskrnl.exe
+ 0002:00000034       __imp_@IofCompleteRequest@8 00010594     ntoskrnl:ntoskrnl.exe
+ 0002:00000038       \177ntoskrnl_NULL_THUNK_DATA 00010598     ntoskrnl:ntoskrnl.exe
+ 0003:00000000       __IMPORT_DESCRIPTOR_ntoskrnl 000106e0     ntoskrnl:ntoskrnl.exe
+ 0003:00000014       __NULL_IMPORT_DESCRIPTOR   000106f4     ntoskrnl:ntoskrnl.exe
+
+ entry point at        0001:00000256
+
+ Static symbols
+

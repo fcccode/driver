@@ -1,0 +1,1 @@
+cmd_/home/user/Data/n900/ldd/asm/char/fops-2.4/ldd.ko := arm-linux-ld -EL -r   --build-id -o /home/user/Data/n900/ldd/asm/char/fops-2.4/ldd.ko /home/user/Data/n900/ldd/asm/char/fops-2.4/ldd.o /home/user/Data/n900/ldd/asm/char/fops-2.4/ldd.mod.o

@@ -1,0 +1,208 @@
+@=======================================================================
+@ Linux Device Driver in Assembly by Steward
+@ 2016/02/14 
+@=======================================================================
+.equ _owner,             0
+.equ _llseek,            1
+.equ _read,              2
+.equ _write,             3
+.equ _aio_read,          4
+.equ _aio_write,         5
+.equ _readdir,           6
+.equ _poll,              7
+.equ _ioctl,             8
+.equ _unlocked_ioctl,    9
+.equ _compat_ioctl,      10
+.equ _mmap,              11
+.equ _open,              12
+.equ _flush,             13
+.equ _release,           14
+.equ _fsync,             15
+.equ _aio_fsync,         16
+.equ _fasync,            17
+.equ _lock,              18
+.equ _sendpage,          19
+.equ _get_unmapped_area, 20
+.equ _check_flags,       21
+.equ _dir_notify,        22
+.equ _flock,             23
+.equ _splice_write,      24
+.equ _splice_read,       25
+.equ _setlease,          26
+.equ fops_index,         27
+.equ fops_size,          (fops_index << 2)
+
+.equ _r0, 0  @ r0 register
+.equ _r1, 1  @ r1 register
+.equ _r2, 2  @ r2 register
+.equ _r3, 3  @ r3 register
+.equ _sp, 4  @ sp register
+.equ _sz, 5  @ string with zero char
+.equ _dw, 6  @ data word
+.equ _db, 7  @ data byte
+.equ _va, 8  @ variable address
+.equ _vv, 9  @ variable value
+.equ _rn, 10 @ register value
+
+.macro _push where:req, type:req, arg:req
+  .if \type == _sz
+    b l_push_sz\@
+    _tmp\@: .asciz "\arg"; .align
+    l_push_sz\@:
+      ldr r0, =_tmp\@
+  .elseif \type == _dw
+    b l_push_dw\@
+    _tmp\@: .word \arg; .align
+    l_push_dw\@:
+      ldr r0, =_tmp\@
+      ldr r0, [r0]
+  .elseif \type == _db
+    b l_push_db\@
+    _tmp\@: .byte \arg; .align
+    l_push_db\@:
+      ldr r0, =_tmp\@
+      ldr r0, [r0]
+  .elseif \type == _va
+    ldr r0, =\arg
+  .elseif \type == _vv
+    ldr r0, =\arg
+    ldr r0, [r0]
+  .elseif \type == _rn
+    mov r0, \arg
+  .else
+    .exitm
+  .endif
+  
+  .if \where == _r0
+  .elseif \where == _r1
+    mov r1, r0
+  .elseif \where == _r2
+    mov r2, r0
+  .elseif \where == _r3
+    mov r3, r0
+  .elseif \where == _sp
+    push {r0}
+  .else
+    .exitm
+  .endif
+.endm
+
+.macro _call fun:req
+ .extern \fun
+  bl \fun
+.endm
+
+.macro _set_struct base:req, fun:req, addr:req
+  adr r2, \addr
+  ldr r1, =\base
+  mov r0, #\fun
+  add r0, r1, r0, lsl #2
+  str r2, [r0]
+.endm
+
+.section .modinfo;
+__module_kernel_version: .asciz "kernel_version=2.6.28";    .align 
+__module_license:        .asciz "license=GPL";              .align 
+__module_author:         .asciz "author=Steward";           .align 
+__mod_uledescription:    .asciz "description=Linux Driver"; .align
+
+.section .data
+major:  .zero         1; .align
+buffer: .zero       255; .align 
+fops:   .zero fops_size; .align
+
+.section .text
+driver_name: .asciz "lddia"; .align
+
+.section .text
+.global init_module
+.global cleanup_module
+lddia_open:
+  push {lr}
+  @ printk()
+  _push _r0, _sz, "lddia, open\n"
+  _call printk
+  @ return 0
+  mov r0, #0
+  pop {pc}
+
+lddia_close:
+  push {lr}
+  @ printk()
+  _push _r0, _sz, "lddia, close\n"
+  _call printk
+  @ return 0
+  mov r0, #0
+  pop {pc}
+
+lddia_read:
+  push {lr}
+  @ printk()
+  _push _r0, _sz, "lddia, read\n"
+  _call printk
+  @ return 0
+  mov r0, #0
+  pop {pc}
+
+lddia_write:
+  push {r4, r5, lr}
+  mov r4, r1
+  mov r5, r2
+  @ memset(buffer, 0, sizeof(buffer))
+  _push _r2, _dw, 255
+  _push _r1, _dw, 0
+  _push _r0, _va, buffer
+  _call memset
+  @ memcpy(buffer, buff, count)
+  _push _r2, _rn, r5
+  _push _r1, _rn, r4
+  _push _r0, _va, buffer
+  _call memcpy
+  @ printk(msg_write, buffer)
+  _push _r1, _va, buffer
+  _push _r0, _sz, "lddia, buffer: %s"
+  _call printk
+  @ return count
+  mov r0, r5
+  pop {r4, r5, pc}
+
+cleanup_module:
+  push {lr}
+  @ unregister(major, driver_name)
+  _push _r1, _va, driver_name
+  _push _r0, _vv, major
+  _call unregister_chrdev
+  @ printk()
+  _push _r0, _sz, "lddia, unload it!\n"
+  _call printk
+  pop {pc}
+
+init_module:
+  push {lr}
+  @ fops.open = lddia_open
+  @ fops.read = lddia_read
+  @ fops.write = lddia_write
+  @ fops.close = lddia_close
+  _set_struct fops, _open, lddia_open
+  _set_struct fops, _read, lddia_read
+  _set_struct fops, _write, lddia_write
+  _set_struct fops, _release, lddia_close
+  @ printk()
+  _push _r0, _sz, "lddia, load it!\n"
+  _call printk
+  @ register_chrdev(0, driver_name, &fops)
+  _push _r2, _va, fops
+  _push _r1, _va, driver_name
+  _push _r0, _dw, 0
+  _call register_chrdev
+  @ save major number
+  ldr r1, =major
+  str r0, [r1]
+  @ printk()
+  _push _r1, _vv, major
+  _push _r0, _sz, "lddia, major number is %d\n"
+  _call printk
+  @ return 0
+  mov r0, #0
+  pop {pc}
+ .end

@@ -1,0 +1,1 @@
+cmd_/home/steward/Downloads/gh_linux_driver/asm/arm/char/ioctl/ldd.o := ld -EL    -r -o /home/steward/Downloads/gh_linux_driver/asm/arm/char/ioctl/ldd.o /home/steward/Downloads/gh_linux_driver/asm/arm/char/ioctl/main.o 

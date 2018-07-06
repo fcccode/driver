@@ -1,0 +1,18 @@
+[Version]
+Version=3000
+[Project]
+Assembler=Masm
+Path=C:\Documents and Settings\test\Desktop\timer-dpc\sys
+Group=2,-1,0,1,timer,-2,-1,1,Assembly,-3,-1,1,Include,-4,-1,1,Misc,-5,-1,1,Resource
+Open=0,1
+Api=
+F1=-2,2,1,0,0,1497,504,49,main.asm
+C1=0
+B1=
+M1=
+[Make]
+Make=0
+0=Windows Driver x86 Debug,'',,'/c /coff /Cp "$C"',"$C.obj",'/MAP /debug /debugtype:cv /nologo /driver:WDM /base:0x10000 /align:32 /out:$O /subsystem:native $C',"$C.sys",'',
+Delete=0
+IncBuild=0
+Run=0,'',''
