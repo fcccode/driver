@@ -1,12 +1,49 @@
 BUILD: Computing Include file dependencies:
-BUILD: Examining c:\documents and settings\test\desktop\fops\exe directory for files to compile.
-oacr invalidate root:x86chk /autocleanqueue
-1>Compiling and Linking c:\documents and settings\test\desktop\fops\exe *************
-1>'nmake.exe /nologo BUILDMSG=Stop. -i BUILD_PASS=PASS2 LINKONLY=1 NOPASS0=1 MAKEDIR_RELATIVE_TO_BASEDIR='
-1>BUILDMSG: _NT_TARGET_VERSION SET TO WINXP
-1>c:\winddk\7600.16385.1\bin\makefile.new(7117) : fatal error U1087: cannot have : and :: dependents for same target
-1>errors in directory c:\documents and settings\test\desktop\fops\exe
-1>c:\winddk\7600.16385.1\bin\makefile.new(7117) : error U1087: cannot have : and :: dependents for same target
-1>Stop.
-1>nmake.exe /nologo BUILDMSG=Stop. -i BUILD_PASS=PASS2 LINKONLY=1 NOPASS0=1 MAKEDIR_RELATIVE_TO_BASEDIR= failed - rc = 2
+BUILD: Examining f:\ioctl\exe directory for files to compile.
+Compiling (NoSync) f:\ioctl\exe directory ********************
+'nmake.exe /nologo BUILDMSG=Stop. -i NTTEST= UMTEST= NOLINK=1 NOPASS0=1 386=1'
+cl -nologo -Ii386\ -I. -IC:\WINDDK\3790~1.183\inc\mfc42 -Iobjchk_wxp_x86\i386 -IC:\WINDDK\3790~1.183\inc\wxp -IC:\WINDDK\3790~1.183\inc\wxp -IC:\WINDDK\3790~1.183\inc\crt -D_X86_=1 -Di386=1  -DSTD_CALL -DCONDITION_HANDLING=1   -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0501 /DWINVER=0x0501 -D_WIN32_IE=0x0603    -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -DDBG=1 -D__BUILDMACHINE__=WinDDK -DFPO=0  -DNDEBUG      /c /Zl /Zp8 /Gy /Gm-  /W3 /WX /Gz  /GX-  /GR- /GF /GS /G6 /Ze /Gi- /QIfdiv- /hotpatch -Z7 /Od /Oi  /Oy-   -FIC:\WINDDK\3790~1.183\inc\wxp\warning.h   .\app.c 
+app.c
 
+Stop.
+Linking f:\ioctl\exe directory ********************
+'nmake.exe /nologo BUILDMSG=Stop. -i LINKONLY=1 NOPASS0=1 NTTEST= UMTEST= 386=1'
+	link -out:objchk_wxp_x86\i386\app.exe -machine:ix86 @C:\DOCUME~1\Doni\LOCALS~1\Temp\nm17.tmp
+Microsoft (R) Incremental Linker Version 7.10.4035
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+-MERGE:_PAGE=PAGE 
+-MERGE:_TEXT=.text 
+-SECTION:INIT,d 
+-OPT:REF 
+-OPT:ICF 
+-IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221 
+-INCREMENTAL:NO 
+-FULLBUILD 
+/release 
+-NODEFAULTLIB 
+/WX 
+-debug 
+-debugtype:cv 
+-version:5.1 
+-osversion:5.1 
+/functionpadmin:5 
+/safeseh 
+/opt:nowin98 
+-merge:.rdata=.text 
+/pdbcompress 
+-STACK:0x40000,0x2000 
+/tsaware 
+-subsystem:console,4.00 
+-base:0x0400000 
+-entry:mainCRTStartup 
+objchk_wxp_x86\i386\app.obj 
+C:\WINDDK\3790~1.183\lib\wxp\i386\BufferOverflowU.lib 
+C:\WINDDK\3790~1.183\lib\crt\i386\libc.lib 
+C:\WINDDK\3790~1.183\lib\wxp\i386\advapi32.lib 
+C:\WINDDK\3790~1.183\lib\wxp\i386\kernel32.lib 
+C:\WINDDK\3790~1.183\lib\wxp\i386\sehupd.lib 
+	echo Skip Binplace:
+Skip Binplace:
+
+Stop.

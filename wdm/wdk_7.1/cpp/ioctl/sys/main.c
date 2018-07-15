@@ -1,30 +1,17 @@
-/*========================================================================================================
-  Basically, all of files downloaded from my website can be modified or redistributed for any purpose.
-  It is my honor to share my interesting to everybody.
-  If you find any illeage content out from my website, please contact me firstly.
-  I will remove all of the illeage parts.
-  Thanks :)
-   
-  Steward Fu
-  g9313716@yuntech.edu.tw
-  https://steward-fu.github.io/website/index.htm
-========================================================================================================*/
 #include <wdm.h>
 
-#define IOCTL_TEST CTL_CODE(FILE_DEVICE_UNKNOWN, 0x800, METHOD_BUFFERED, FILE_ANY_ACCESS)
- 
-#define DEV_NAME  L"\\Device\\firstIOCTL"
-#define SYM_NAME  L"\\DosDevices\\firstIOCTL"
-#define MSG       "WDM driver tutorial for Device IOCTL"
+#define IOCTL_TEST  CTL_CODE(FILE_DEVICE_UNKNOWN, 0x800, METHOD_BUFFERED, FILE_ANY_ACCESS) 
+#define DEV_NAME    L"\\Device\\firstIOCTL"
+#define SYM_NAME    L"\\DosDevices\\firstIOCTL"
+#define MSG         "Input Output Control(IOCTL)"
 
 PDEVICE_OBJECT gNextDevice=NULL;
 
-//*** system will vist this routine when it needs to add new device
 NTSTATUS AddDevice(PDRIVER_OBJECT pOurDriver, PDEVICE_OBJECT pPhyDevice)
 {
-  PDEVICE_OBJECT pOurDevice=NULL;
-  UNICODE_STRING usDeviceName;
   UNICODE_STRING usSymboName;
+  UNICODE_STRING usDeviceName;
+  PDEVICE_OBJECT pOurDevice=NULL;
 
   DbgPrint(MSG);
   RtlInitUnicodeString(&usDeviceName, DEV_NAME);
@@ -37,13 +24,10 @@ NTSTATUS AddDevice(PDRIVER_OBJECT pOurDriver, PDEVICE_OBJECT pPhyDevice)
   return STATUS_SUCCESS;
 }
   
-//*** it is time to unload our driver
 void Unload(PDRIVER_OBJECT pOurDriver)
 {
-  pOurDriver = pOurDriver;
 }
 
-//*** process pnp irp
 NTSTATUS IrpPnp(PDEVICE_OBJECT pOurDevice, PIRP pIrp)
 {
   PIO_STACK_LOCATION psk = IoGetCurrentIrpStackLocation(pIrp);
@@ -59,38 +43,35 @@ NTSTATUS IrpPnp(PDEVICE_OBJECT pOurDevice, PIRP pIrp)
   return IoCallDriver(gNextDevice, pIrp);
 }
 
-//*** process ioctl irp
 NTSTATUS IrpIOCTL(PDEVICE_OBJECT pOurDevice, PIRP pIrp)
 {
   PIO_STACK_LOCATION psk = IoGetCurrentIrpStackLocation(pIrp);
 
   switch(psk->Parameters.DeviceIoControl.IoControlCode){
   case IOCTL_TEST:
-    DbgPrint("IrpIOCTL, IOCTL_TEST\n");
+    DbgPrint("IOCTL_TEST\n");
     break;
   }
   IoCompleteRequest(pIrp, IO_NO_INCREMENT);
   return STATUS_SUCCESS;
 }
 
-//*** process file irp
 NTSTATUS IrpFile(PDEVICE_OBJECT pOurDevice, PIRP pIrp)
 {
   PIO_STACK_LOCATION psk = IoGetCurrentIrpStackLocation(pIrp);
 
   switch(psk->MajorFunction){
   case IRP_MJ_CREATE:
-    DbgPrint("IrpFile, IRP_MJ_CREATE\n");
+    DbgPrint("IRP_MJ_CREATE\n");
     break;
   case IRP_MJ_CLOSE:
-    DbgPrint("IrpFile, IRP_MJ_CLOSE\n");
+    DbgPrint("IRP_MJ_CLOSE\n");
     break;
   }
   IoCompleteRequest(pIrp, IO_NO_INCREMENT);
   return STATUS_SUCCESS;
 }
   
-//*** driver entry
 NTSTATUS DriverEntry(PDRIVER_OBJECT pOurDriver, PUNICODE_STRING pOurRegistry)
 {
   pOurDriver->MajorFunction[IRP_MJ_PNP] = IrpPnp;
@@ -101,3 +82,4 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT pOurDriver, PUNICODE_STRING pOurRegistry)
   pOurDriver->DriverUnload = Unload;
   return STATUS_SUCCESS;
 }
+
